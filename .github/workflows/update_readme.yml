@@ -16,8 +16,8 @@ jobs:
           uses: actions/checkout@v2
 
         - run: sed -i '/<!-- CHANGELOG:START -->/,/<!-- CHANGELOG:END -->/d' README.md
-        - run: echo '## Project Draft' >> README.md
         - run: echo '<!-- CHANGELOG:START -->' >> README.md
+        - run: echo '## Project Draft' >> README.md
         - run: cat project_draft.md >> README.md
         - run: echo '<!-- CHANGELOG:END -->' >> README.md
         
