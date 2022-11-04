@@ -20,7 +20,8 @@ jobs:
         - run: echo '<!-- CHANGELOG:START -->' >> README.md
         - run: cat project_draft.md >> README.md
         - run: echo '<!-- CHANGELOG:END -->' >> README.md
-
+        
+        - run: git config --global --add safe.directory /github/workspace
         - name: push
           uses: actions-x/commit@v2
           env:
