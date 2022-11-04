@@ -25,7 +25,7 @@ jobs:
         - name: push
           uses: github-actions-x/commit@v2.9
           with:
-             push-branch: 'master'
+             push-branch: 'main'
              github-token: ${{ secrets.GITHUB_TOKEN }}
              name: GitHub Actions Autocommitter
              files: ./README.md
