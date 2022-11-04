@@ -1,0 +1,2 @@
+# .local folder for unversioned files (demos, examples, tests, ...)
+.local/*
