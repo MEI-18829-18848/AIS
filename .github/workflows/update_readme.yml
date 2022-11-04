@@ -23,10 +23,11 @@ jobs:
         
         - run: git config --global --add safe.directory /github/workspace
         - name: push
-          uses: actions-x/commit@v2
-          env:
-             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
+          uses: github-actions-x/commit@v2.9
           with:
+             push-branch: 'master'
+             github-token: ${{ secrets.GITHUB_TOKEN }}
              name: GitHub Actions Autocommitter
              files: ./README.md
-             message: '[GITOPS] updated README with "project_draft"'
+             commit-message: 'updated README with "project_draft"'
+             force-add: 'true'
