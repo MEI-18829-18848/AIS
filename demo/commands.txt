@@ -1,0 +1,2 @@
+mvn speedment:tool
+mvn spring-boot:run
