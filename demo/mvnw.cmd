@@ -68,13 +68,19 @@ echo.
 goto error
 
 :OkJHome
-if exist "%JAVA_HOME%\bin\java.exe" goto init
+@REM if exist "%JAVA_HOME%\bin\java.exe" goto init
+set IPCA_JAVA=C:\IPCA\Java\jdk-17.0.5
+if exist "%IPCA_JAVA%\bin\java.exe" goto init
 
 echo.
 echo Error: JAVA_HOME is set to an invalid directory. >&2
 echo JAVA_HOME = "%JAVA_HOME%" >&2
 echo Please set the JAVA_HOME variable in your environment to match the >&2
 echo location of your Java installation. >&2
+echo.
+echo #####################################################
+echo THIS FILE HAS BEEN MESSED WITH, PLEASE CHECK CONTENTS
+echo #####################################################
 echo.
 goto error
 
@@ -116,7 +122,7 @@ for /F "usebackq delims=" %%a in ("%MAVEN_PROJECTBASEDIR%\.mvn\jvm.config") do s
 
 :endReadAdditionalConfig
 
-SET MAVEN_JAVA_EXE="%JAVA_HOME%\bin\java.exe"
+SET MAVEN_JAVA_EXE="%IPCA_JAVA%\bin\java.exe"
 set WRAPPER_JAR="%MAVEN_PROJECTBASEDIR%\.mvn\wrapper\maven-wrapper.jar"
 set WRAPPER_LAUNCHER=org.apache.maven.wrapper.MavenWrapperMain
 

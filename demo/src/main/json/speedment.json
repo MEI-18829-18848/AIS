@@ -1,11 +1,12 @@
 {
   "config" : {
-    "speedmentVersion" : "Speedment:3.2.9",
+    "speedmentVersion" : "Speedment:3.2.10",
     "nameProtected" : false,
     "oasInfoContactEmail" : "",
     "companyName" : "company",
     "oasInfoContactName" : "",
     "packageLocation" : "src/main/java/",
+    "enabled" : true,
     "dbmses" : [
       {
         "nameProtected" : true,
@@ -24,7 +25,7 @@
                     "expanded" : false,
                     "foreignKeyColumns" : [
                       {
-                        "foreignDatabaseName" : "appReservas",
+                        "foreignDatabaseName" : "appreservas",
                         "foreignSchemaName" : "public",
                         "expanded" : true,
                         "name" : "userid",
@@ -44,74 +45,56 @@
                 "columns" : [
                   {
                     "databaseType" : "java.lang.Integer",
-                    "nameProtected" : true,
-                    "expanded" : true,
                     "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "expanded" : true,
                     "nullable" : false,
-                    "autoIncrement" : false,
                     "name" : "clienteid",
-                    "nullableImplementation" : "OPTIONAL",
                     "id" : "clienteid",
                     "ordinalPosition" : 1,
                     "enabled" : true
                   },
                   {
                     "databaseType" : "java.lang.Integer",
-                    "nameProtected" : true,
-                    "expanded" : true,
                     "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "expanded" : true,
                     "nullable" : false,
-                    "autoIncrement" : false,
                     "name" : "userid",
-                    "nullableImplementation" : "OPTIONAL",
                     "id" : "userid",
                     "ordinalPosition" : 2,
                     "enabled" : true
                   },
                   {
                     "databaseType" : "java.lang.String",
-                    "nameProtected" : true,
                     "expanded" : true,
                     "nullable" : false,
-                    "autoIncrement" : false,
                     "name" : "nome",
-                    "nullableImplementation" : "OPTIONAL",
                     "id" : "nome",
                     "ordinalPosition" : 3,
                     "enabled" : true
                   },
                   {
                     "databaseType" : "java.lang.Integer",
-                    "nameProtected" : true,
                     "expanded" : true,
                     "nullable" : true,
-                    "autoIncrement" : false,
                     "name" : "telemovel",
-                    "nullableImplementation" : "OPTIONAL",
                     "id" : "telemovel",
                     "ordinalPosition" : 4,
                     "enabled" : true
                   },
                   {
                     "databaseType" : "java.lang.String",
-                    "nameProtected" : true,
                     "expanded" : true,
                     "nullable" : true,
-                    "autoIncrement" : false,
                     "name" : "email",
-                    "nullableImplementation" : "OPTIONAL",
                     "id" : "email",
                     "ordinalPosition" : 5,
                     "enabled" : true
                   },
                   {
                     "databaseType" : "java.lang.Integer",
-                    "nameProtected" : true,
                     "expanded" : true,
                     "nullable" : true,
-                    "autoIncrement" : false,
                     "name" : "nif",
-                    "nullableImplementation" : "OPTIONAL",
                     "id" : "nif",
                     "ordinalPosition" : 6,
                     "enabled" : true
@@ -121,11 +104,10 @@
                 "enabled" : true,
                 "restEnableFilters" : true,
                 "restEnableDelete" : true,
-                "expanded" : false,
-                "restEnabled" : true,
+                "expanded" : true,
+                "restEnabled" : false,
                 "primaryKeyColumns" : [
                   {
-                    "nameProtected" : false,
                     "expanded" : true,
                     "name" : "clienteid",
                     "id" : "clienteid",
@@ -160,15 +142,12 @@
                 "restEnableList" : true
               },
               {
-                "implements" : "",
-                "nameProtected" : true,
-                "restEnableGet" : true,
                 "foreignKeys" : [
                   {
                     "expanded" : false,
                     "foreignKeyColumns" : [
                       {
-                        "foreignDatabaseName" : "appReservas",
+                        "foreignDatabaseName" : "appreservas",
                         "foreignSchemaName" : "public",
                         "expanded" : true,
                         "name" : "organizadorid",
@@ -186,7 +165,7 @@
                     "expanded" : false,
                     "foreignKeyColumns" : [
                       {
-                        "foreignDatabaseName" : "appReservas",
+                        "foreignDatabaseName" : "appreservas",
                         "foreignSchemaName" : "public",
                         "expanded" : true,
                         "name" : "salaid",
@@ -201,97 +180,7 @@
                     "enabled" : true
                   }
                 ],
-                "restEnableCreate" : true,
-                "isView" : false,
-                "columns" : [
-                  {
-                    "databaseType" : "java.lang.Integer",
-                    "nameProtected" : true,
-                    "expanded" : true,
-                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
-                    "nullable" : false,
-                    "autoIncrement" : false,
-                    "name" : "eventoid",
-                    "nullableImplementation" : "OPTIONAL",
-                    "id" : "eventoid",
-                    "ordinalPosition" : 1,
-                    "enabled" : true
-                  },
-                  {
-                    "databaseType" : "java.lang.Integer",
-                    "nameProtected" : true,
-                    "expanded" : true,
-                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
-                    "nullable" : false,
-                    "autoIncrement" : false,
-                    "name" : "salaid",
-                    "nullableImplementation" : "OPTIONAL",
-                    "id" : "salaid",
-                    "ordinalPosition" : 2,
-                    "enabled" : true
-                  },
-                  {
-                    "databaseType" : "java.lang.Integer",
-                    "nameProtected" : true,
-                    "expanded" : true,
-                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
-                    "nullable" : false,
-                    "autoIncrement" : false,
-                    "name" : "organizadorid",
-                    "nullableImplementation" : "OPTIONAL",
-                    "id" : "organizadorid",
-                    "ordinalPosition" : 3,
-                    "enabled" : true
-                  },
-                  {
-                    "databaseType" : "java.lang.String",
-                    "nameProtected" : true,
-                    "expanded" : true,
-                    "nullable" : true,
-                    "autoIncrement" : false,
-                    "name" : "nome",
-                    "nullableImplementation" : "OPTIONAL",
-                    "id" : "nome",
-                    "ordinalPosition" : 4,
-                    "enabled" : true
-                  },
-                  {
-                    "databaseType" : "java.lang.String",
-                    "expanded" : true,
-                    "nullable" : true,
-                    "name" : "descricao",
-                    "id" : "descricao",
-                    "ordinalPosition" : 5,
-                    "enabled" : true
-                  },
-                  {
-                    "databaseType" : "java.lang.String",
-                    "expanded" : true,
-                    "nullable" : true,
-                    "name" : "categoria",
-                    "id" : "categoria",
-                    "ordinalPosition" : 6,
-                    "enabled" : true
-                  },
-                  {
-                    "databaseType" : "java.lang.String",
-                    "nameProtected" : true,
-                    "expanded" : true,
-                    "nullable" : true,
-                    "autoIncrement" : false,
-                    "name" : "imdbid",
-                    "nullableImplementation" : "OPTIONAL",
-                    "id" : "imdbid",
-                    "ordinalPosition" : 7,
-                    "enabled" : true
-                  }
-                ],
-                "restEnableUpdate" : true,
-                "enabled" : true,
-                "restEnableFilters" : true,
-                "restEnableDelete" : true,
-                "expanded" : false,
-                "restEnabled" : true,
+                "expanded" : true,
                 "primaryKeyColumns" : [
                   {
                     "expanded" : true,
@@ -319,24 +208,86 @@
                     "enabled" : true
                   }
                 ],
+                "isView" : false,
+                "columns" : [
+                  {
+                    "databaseType" : "java.lang.Integer",
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "eventoid",
+                    "id" : "eventoid",
+                    "ordinalPosition" : 1,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.Integer",
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "salaid",
+                    "id" : "salaid",
+                    "ordinalPosition" : 2,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.Integer",
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "organizadorid",
+                    "id" : "organizadorid",
+                    "ordinalPosition" : 3,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : true,
+                    "name" : "nome",
+                    "id" : "nome",
+                    "ordinalPosition" : 4,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : true,
+                    "name" : "descricao",
+                    "id" : "descricao",
+                    "ordinalPosition" : 5,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : true,
+                    "name" : "categoria",
+                    "id" : "categoria",
+                    "ordinalPosition" : 6,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : true,
+                    "name" : "imdbid",
+                    "id" : "imdbid",
+                    "ordinalPosition" : 7,
+                    "enabled" : true
+                  }
+                ],
                 "name" : "evento",
-                "restEnableSkipLimit" : true,
-                "restCors" : "*",
                 "id" : "evento",
-                "restEnableSorters" : true,
-                "restEnableTotal" : false,
-                "restEnableList" : true
+                "enabled" : true
               },
               {
-                "implements" : "",
-                "nameProtected" : true,
-                "restEnableGet" : true,
                 "foreignKeys" : [
                   {
                     "expanded" : false,
                     "foreignKeyColumns" : [
                       {
-                        "foreignDatabaseName" : "appReservas",
+                        "foreignDatabaseName" : "appreservas",
                         "foreignSchemaName" : "public",
                         "expanded" : true,
                         "name" : "salaid",
@@ -347,11 +298,35 @@
                       }
                     ],
                     "name" : "lugar_salaid_fkey",
-                    "id" : "lugar_salaid_fkey",
-                    "enabled" : true
+                    "id" : "lugar_salaid_fkey"
                   }
                 ],
-                "restEnableCreate" : true,
+                "expanded" : true,
+                "primaryKeyColumns" : [
+                  {
+                    "expanded" : true,
+                    "name" : "lugarid",
+                    "id" : "lugarid",
+                    "ordinalPosition" : 1
+                  }
+                ],
+                "indexes" : [
+                  {
+                    "expanded" : false,
+                    "unique" : true,
+                    "name" : "lugar_pkey",
+                    "indexColumns" : [
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "lugarid",
+                        "id" : "lugarid",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "id" : "lugar_pkey"
+                  }
+                ],
                 "isView" : false,
                 "columns" : [
                   {
@@ -371,8 +346,7 @@
                     "nullable" : false,
                     "name" : "salaid",
                     "id" : "salaid",
-                    "ordinalPosition" : 2,
-                    "enabled" : true
+                    "ordinalPosition" : 2
                   },
                   {
                     "databaseType" : "java.lang.String",
@@ -380,8 +354,7 @@
                     "nullable" : true,
                     "name" : "nome",
                     "id" : "nome",
-                    "ordinalPosition" : 3,
-                    "enabled" : true
+                    "ordinalPosition" : 3
                   },
                   {
                     "databaseType" : "java.lang.Integer",
@@ -389,8 +362,7 @@
                     "nullable" : true,
                     "name" : "quantidade",
                     "id" : "quantidade",
-                    "ordinalPosition" : 4,
-                    "enabled" : true
+                    "ordinalPosition" : 4
                   },
                   {
                     "databaseType" : "java.math.BigDecimal",
@@ -398,61 +370,20 @@
                     "nullable" : true,
                     "name" : "valor",
                     "id" : "valor",
-                    "ordinalPosition" : 5,
-                    "enabled" : true
-                  }
-                ],
-                "restEnableUpdate" : true,
-                "enabled" : true,
-                "restEnableFilters" : true,
-                "restEnableDelete" : true,
-                "expanded" : false,
-                "restEnabled" : true,
-                "primaryKeyColumns" : [
-                  {
-                    "expanded" : true,
-                    "name" : "lugarid",
-                    "id" : "lugarid",
-                    "ordinalPosition" : 1,
-                    "enabled" : true
-                  }
-                ],
-                "indexes" : [
-                  {
-                    "expanded" : false,
-                    "unique" : true,
-                    "name" : "lugar_pkey",
-                    "indexColumns" : [
-                      {
-                        "orderType" : "ASC",
-                        "expanded" : true,
-                        "name" : "lugarid",
-                        "id" : "lugarid",
-                        "ordinalPosition" : 1
-                      }
-                    ],
-                    "id" : "lugar_pkey",
-                    "enabled" : true
+                    "ordinalPosition" : 5
                   }
                 ],
                 "name" : "lugar",
-                "restEnableSkipLimit" : true,
-                "restCors" : "*",
                 "id" : "lugar",
-                "restEnableSorters" : true,
-                "restEnableTotal" : false,
-                "restEnableList" : true
+                "enabled" : true
               },
               {
-                "implements" : "",
-                "nameProtected" : true,
-                "restEnableGet" : true,
                 "foreignKeys" : [
                   {
                     "expanded" : false,
                     "foreignKeyColumns" : [
                       {
-                        "foreignDatabaseName" : "appReservas",
+                        "foreignDatabaseName" : "appreservas",
                         "foreignSchemaName" : "public",
                         "expanded" : true,
                         "name" : "userid",
@@ -463,65 +394,16 @@
                       }
                     ],
                     "name" : "organizador_userid_fkey",
-                    "id" : "organizador_userid_fkey",
-                    "enabled" : true
+                    "id" : "organizador_userid_fkey"
                   }
                 ],
-                "restEnableCreate" : true,
-                "isView" : false,
-                "columns" : [
-                  {
-                    "databaseType" : "java.lang.Integer",
-                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
-                    "expanded" : true,
-                    "nullable" : false,
-                    "name" : "organizadorid",
-                    "id" : "organizadorid",
-                    "ordinalPosition" : 1,
-                    "enabled" : true
-                  },
-                  {
-                    "databaseType" : "java.lang.String",
-                    "expanded" : true,
-                    "nullable" : false,
-                    "name" : "nome",
-                    "id" : "nome",
-                    "ordinalPosition" : 2,
-                    "enabled" : true
-                  },
-                  {
-                    "databaseType" : "java.lang.String",
-                    "expanded" : true,
-                    "nullable" : true,
-                    "name" : "contacto",
-                    "id" : "contacto",
-                    "ordinalPosition" : 3,
-                    "enabled" : true
-                  },
-                  {
-                    "databaseType" : "java.lang.Integer",
-                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
-                    "expanded" : true,
-                    "nullable" : false,
-                    "name" : "userid",
-                    "id" : "userid",
-                    "ordinalPosition" : 4,
-                    "enabled" : true
-                  }
-                ],
-                "restEnableUpdate" : true,
-                "enabled" : true,
-                "restEnableFilters" : true,
-                "restEnableDelete" : true,
-                "expanded" : false,
-                "restEnabled" : true,
+                "expanded" : true,
                 "primaryKeyColumns" : [
                   {
                     "expanded" : true,
                     "name" : "organizadorid",
                     "id" : "organizadorid",
-                    "ordinalPosition" : 1,
-                    "enabled" : true
+                    "ordinalPosition" : 1
                   }
                 ],
                 "indexes" : [
@@ -538,28 +420,56 @@
                         "ordinalPosition" : 1
                       }
                     ],
-                    "id" : "organizador_pkey",
-                    "enabled" : true
+                    "id" : "organizador_pkey"
+                  }
+                ],
+                "isView" : false,
+                "columns" : [
+                  {
+                    "databaseType" : "java.lang.Integer",
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "organizadorid",
+                    "id" : "organizadorid",
+                    "ordinalPosition" : 1
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "nome",
+                    "id" : "nome",
+                    "ordinalPosition" : 2
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : true,
+                    "name" : "contacto",
+                    "id" : "contacto",
+                    "ordinalPosition" : 3
+                  },
+                  {
+                    "databaseType" : "java.lang.Integer",
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "userid",
+                    "id" : "userid",
+                    "ordinalPosition" : 4
                   }
                 ],
                 "name" : "organizador",
-                "restEnableSkipLimit" : true,
-                "restCors" : "*",
-                "id" : "organizador",
-                "restEnableSorters" : true,
-                "restEnableTotal" : false,
-                "restEnableList" : true
+                "id" : "organizador"
               },
               {
-                "implements" : "",
-                "nameProtected" : true,
-                "restEnableGet" : true,
                 "foreignKeys" : [
                   {
                     "expanded" : false,
                     "foreignKeyColumns" : [
                       {
-                        "foreignDatabaseName" : "appReservas",
+                        "foreignDatabaseName" : "appreservas",
                         "foreignSchemaName" : "public",
                         "expanded" : true,
                         "name" : "clienteid",
@@ -570,14 +480,13 @@
                       }
                     ],
                     "name" : "reserva_clienteid_fkey",
-                    "id" : "reserva_clienteid_fkey",
-                    "enabled" : true
+                    "id" : "reserva_clienteid_fkey"
                   },
                   {
                     "expanded" : false,
                     "foreignKeyColumns" : [
                       {
-                        "foreignDatabaseName" : "appReservas",
+                        "foreignDatabaseName" : "appreservas",
                         "foreignSchemaName" : "public",
                         "expanded" : true,
                         "name" : "sessaoid",
@@ -588,66 +497,16 @@
                       }
                     ],
                     "name" : "reserva_sessaoid_fkey",
-                    "id" : "reserva_sessaoid_fkey",
-                    "enabled" : true
+                    "id" : "reserva_sessaoid_fkey"
                   }
                 ],
-                "restEnableCreate" : true,
-                "isView" : false,
-                "columns" : [
-                  {
-                    "databaseType" : "java.lang.Integer",
-                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
-                    "expanded" : true,
-                    "nullable" : false,
-                    "name" : "reservaid",
-                    "id" : "reservaid",
-                    "ordinalPosition" : 1,
-                    "enabled" : true
-                  },
-                  {
-                    "databaseType" : "java.lang.Integer",
-                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
-                    "expanded" : true,
-                    "nullable" : false,
-                    "name" : "sessaoid",
-                    "id" : "sessaoid",
-                    "ordinalPosition" : 2,
-                    "enabled" : true
-                  },
-                  {
-                    "databaseType" : "java.lang.Integer",
-                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
-                    "expanded" : true,
-                    "nullable" : false,
-                    "name" : "clienteid",
-                    "id" : "clienteid",
-                    "ordinalPosition" : 3,
-                    "enabled" : true
-                  },
-                  {
-                    "databaseType" : "java.math.BigDecimal",
-                    "expanded" : true,
-                    "nullable" : true,
-                    "name" : "custo",
-                    "id" : "custo",
-                    "ordinalPosition" : 4,
-                    "enabled" : true
-                  }
-                ],
-                "restEnableUpdate" : true,
-                "enabled" : true,
-                "restEnableFilters" : true,
-                "restEnableDelete" : true,
-                "expanded" : false,
-                "restEnabled" : true,
+                "expanded" : true,
                 "primaryKeyColumns" : [
                   {
                     "expanded" : true,
                     "name" : "reservaid",
                     "id" : "reservaid",
-                    "ordinalPosition" : 1,
-                    "enabled" : true
+                    "ordinalPosition" : 1
                   }
                 ],
                 "indexes" : [
@@ -664,28 +523,57 @@
                         "ordinalPosition" : 1
                       }
                     ],
-                    "id" : "reserva_pkey",
-                    "enabled" : true
+                    "id" : "reserva_pkey"
+                  }
+                ],
+                "isView" : false,
+                "columns" : [
+                  {
+                    "databaseType" : "java.lang.Integer",
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "reservaid",
+                    "id" : "reservaid",
+                    "ordinalPosition" : 1
+                  },
+                  {
+                    "databaseType" : "java.lang.Integer",
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "sessaoid",
+                    "id" : "sessaoid",
+                    "ordinalPosition" : 2
+                  },
+                  {
+                    "databaseType" : "java.lang.Integer",
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "clienteid",
+                    "id" : "clienteid",
+                    "ordinalPosition" : 3
+                  },
+                  {
+                    "databaseType" : "java.math.BigDecimal",
+                    "expanded" : true,
+                    "nullable" : true,
+                    "name" : "custo",
+                    "id" : "custo",
+                    "ordinalPosition" : 4
                   }
                 ],
                 "name" : "reserva",
-                "restEnableSkipLimit" : true,
-                "restCors" : "*",
-                "id" : "reserva",
-                "restEnableSorters" : true,
-                "restEnableTotal" : false,
-                "restEnableList" : true
+                "id" : "reserva"
               },
               {
-                "implements" : "",
-                "nameProtected" : true,
-                "restEnableGet" : false,
                 "foreignKeys" : [
                   {
                     "expanded" : false,
                     "foreignKeyColumns" : [
                       {
-                        "foreignDatabaseName" : "appReservas",
+                        "foreignDatabaseName" : "appreservas",
                         "foreignSchemaName" : "public",
                         "expanded" : true,
                         "name" : "lugarid",
@@ -696,14 +584,13 @@
                       }
                     ],
                     "name" : "reservalugar_lugarid_fkey",
-                    "id" : "reservalugar_lugarid_fkey",
-                    "enabled" : true
+                    "id" : "reservalugar_lugarid_fkey"
                   },
                   {
                     "expanded" : false,
                     "foreignKeyColumns" : [
                       {
-                        "foreignDatabaseName" : "appReservas",
+                        "foreignDatabaseName" : "appreservas",
                         "foreignSchemaName" : "public",
                         "expanded" : true,
                         "name" : "reservaid",
@@ -714,54 +601,22 @@
                       }
                     ],
                     "name" : "reservalugar_reservaid_fkey",
-                    "id" : "reservalugar_reservaid_fkey",
-                    "enabled" : true
+                    "id" : "reservalugar_reservaid_fkey"
                   }
                 ],
-                "restEnableCreate" : true,
-                "isView" : false,
-                "columns" : [
-                  {
-                    "databaseType" : "java.lang.Integer",
-                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
-                    "expanded" : true,
-                    "nullable" : false,
-                    "name" : "reservaid",
-                    "id" : "reservaid",
-                    "ordinalPosition" : 1,
-                    "enabled" : true
-                  },
-                  {
-                    "databaseType" : "java.lang.Integer",
-                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
-                    "expanded" : true,
-                    "nullable" : false,
-                    "name" : "lugarid",
-                    "id" : "lugarid",
-                    "ordinalPosition" : 2,
-                    "enabled" : true
-                  }
-                ],
-                "restEnableUpdate" : false,
-                "enabled" : true,
-                "restEnableFilters" : true,
-                "restEnableDelete" : false,
-                "expanded" : false,
-                "restEnabled" : true,
+                "expanded" : true,
                 "primaryKeyColumns" : [
                   {
                     "expanded" : true,
                     "name" : "reservaid",
                     "id" : "reservaid",
-                    "ordinalPosition" : 1,
-                    "enabled" : true
+                    "ordinalPosition" : 1
                   },
                   {
                     "expanded" : true,
                     "name" : "lugarid",
                     "id" : "lugarid",
-                    "ordinalPosition" : 2,
-                    "enabled" : true
+                    "ordinalPosition" : 2
                   }
                 ],
                 "indexes" : [
@@ -785,23 +640,9 @@
                         "ordinalPosition" : 2
                       }
                     ],
-                    "id" : "reservalugarkey",
-                    "enabled" : true
+                    "id" : "reservalugarkey"
                   }
                 ],
-                "name" : "reservalugar",
-                "restEnableSkipLimit" : true,
-                "restCors" : "*",
-                "id" : "reservalugar",
-                "restEnableSorters" : true,
-                "restEnableTotal" : false,
-                "restEnableList" : true
-              },
-              {
-                "implements" : "",
-                "nameProtected" : true,
-                "restEnableGet" : true,
-                "restEnableCreate" : true,
                 "isView" : false,
                 "columns" : [
                   {
@@ -809,62 +650,31 @@
                     "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "expanded" : true,
                     "nullable" : false,
-                    "name" : "salaid",
-                    "id" : "salaid",
-                    "ordinalPosition" : 1,
-                    "enabled" : true
-                  },
-                  {
-                    "databaseType" : "java.lang.String",
-                    "expanded" : true,
-                    "nullable" : true,
-                    "name" : "nome",
-                    "id" : "nome",
-                    "ordinalPosition" : 2,
-                    "enabled" : true
-                  },
-                  {
-                    "databaseType" : "java.lang.String",
-                    "expanded" : true,
-                    "nullable" : true,
-                    "name" : "localiza��o",
-                    "id" : "localiza��o",
-                    "ordinalPosition" : 3,
-                    "enabled" : true
-                  },
-                  {
-                    "databaseType" : "java.lang.Boolean",
-                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
-                    "expanded" : true,
-                    "nullable" : false,
-                    "name" : "luagresmarcados",
-                    "id" : "luagresmarcados",
-                    "ordinalPosition" : 4,
-                    "enabled" : true
+                    "name" : "reservaid",
+                    "id" : "reservaid",
+                    "ordinalPosition" : 1
                   },
                   {
                     "databaseType" : "java.lang.Integer",
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "expanded" : true,
-                    "nullable" : true,
-                    "name" : "lotacao",
-                    "id" : "lotacao",
-                    "ordinalPosition" : 5,
-                    "enabled" : true
+                    "nullable" : false,
+                    "name" : "lugarid",
+                    "id" : "lugarid",
+                    "ordinalPosition" : 2
                   }
                 ],
-                "restEnableUpdate" : true,
-                "enabled" : true,
-                "restEnableFilters" : true,
-                "restEnableDelete" : true,
-                "expanded" : false,
-                "restEnabled" : true,
+                "name" : "reservalugar",
+                "id" : "reservalugar"
+              },
+              {
+                "expanded" : true,
                 "primaryKeyColumns" : [
                   {
                     "expanded" : true,
                     "name" : "salaid",
                     "id" : "salaid",
-                    "ordinalPosition" : 1,
-                    "enabled" : true
+                    "ordinalPosition" : 1
                   }
                 ],
                 "indexes" : [
@@ -881,28 +691,64 @@
                         "ordinalPosition" : 1
                       }
                     ],
-                    "id" : "sala_pkey",
-                    "enabled" : true
+                    "id" : "sala_pkey"
+                  }
+                ],
+                "isView" : false,
+                "columns" : [
+                  {
+                    "databaseType" : "java.lang.Integer",
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "salaid",
+                    "id" : "salaid",
+                    "ordinalPosition" : 1
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : true,
+                    "name" : "nome",
+                    "id" : "nome",
+                    "ordinalPosition" : 2
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : true,
+                    "name" : "localiza��o",
+                    "id" : "localiza��o",
+                    "ordinalPosition" : 3
+                  },
+                  {
+                    "databaseType" : "java.lang.Boolean",
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "luagresmarcados",
+                    "id" : "luagresmarcados",
+                    "ordinalPosition" : 4
+                  },
+                  {
+                    "databaseType" : "java.lang.Integer",
+                    "expanded" : true,
+                    "nullable" : true,
+                    "name" : "lotacao",
+                    "id" : "lotacao",
+                    "ordinalPosition" : 5
                   }
                 ],
                 "name" : "sala",
-                "restEnableSkipLimit" : true,
-                "restCors" : "*",
-                "id" : "sala",
-                "restEnableSorters" : true,
-                "restEnableTotal" : false,
-                "restEnableList" : true
+                "id" : "sala"
               },
               {
-                "implements" : "",
-                "nameProtected" : true,
-                "restEnableGet" : true,
                 "foreignKeys" : [
                   {
                     "expanded" : false,
                     "foreignKeyColumns" : [
                       {
-                        "foreignDatabaseName" : "appReservas",
+                        "foreignDatabaseName" : "appreservas",
                         "foreignSchemaName" : "public",
                         "expanded" : true,
                         "name" : "eventoid",
@@ -913,14 +759,13 @@
                       }
                     ],
                     "name" : "sessao_eventoid_fkey",
-                    "id" : "sessao_eventoid_fkey",
-                    "enabled" : true
+                    "id" : "sessao_eventoid_fkey"
                   },
                   {
                     "expanded" : false,
                     "foreignKeyColumns" : [
                       {
-                        "foreignDatabaseName" : "appReservas",
+                        "foreignDatabaseName" : "appreservas",
                         "foreignSchemaName" : "public",
                         "expanded" : true,
                         "name" : "salaid",
@@ -931,75 +776,16 @@
                       }
                     ],
                     "name" : "sessao_salaid_fkey",
-                    "id" : "sessao_salaid_fkey",
-                    "enabled" : true
+                    "id" : "sessao_salaid_fkey"
                   }
                 ],
-                "restEnableCreate" : true,
-                "isView" : false,
-                "columns" : [
-                  {
-                    "databaseType" : "java.lang.Integer",
-                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
-                    "expanded" : true,
-                    "nullable" : false,
-                    "name" : "sessaoid",
-                    "id" : "sessaoid",
-                    "ordinalPosition" : 1,
-                    "enabled" : true
-                  },
-                  {
-                    "databaseType" : "java.lang.Integer",
-                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
-                    "expanded" : true,
-                    "nullable" : false,
-                    "name" : "eventoid",
-                    "id" : "eventoid",
-                    "ordinalPosition" : 2,
-                    "enabled" : true
-                  },
-                  {
-                    "databaseType" : "java.lang.Integer",
-                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
-                    "expanded" : true,
-                    "nullable" : false,
-                    "name" : "salaid",
-                    "id" : "salaid",
-                    "ordinalPosition" : 3,
-                    "enabled" : true
-                  },
-                  {
-                    "databaseType" : "java.lang.Integer",
-                    "expanded" : true,
-                    "nullable" : true,
-                    "name" : "duracao",
-                    "id" : "duracao",
-                    "ordinalPosition" : 4,
-                    "enabled" : true
-                  },
-                  {
-                    "databaseType" : "java.sql.Timestamp",
-                    "expanded" : true,
-                    "nullable" : true,
-                    "name" : "data",
-                    "id" : "data",
-                    "ordinalPosition" : 5,
-                    "enabled" : true
-                  }
-                ],
-                "restEnableUpdate" : true,
-                "enabled" : true,
-                "restEnableFilters" : true,
-                "restEnableDelete" : true,
-                "expanded" : false,
-                "restEnabled" : true,
+                "expanded" : true,
                 "primaryKeyColumns" : [
                   {
                     "expanded" : true,
                     "name" : "sessaoid",
                     "id" : "sessaoid",
-                    "ordinalPosition" : 1,
-                    "enabled" : true
+                    "ordinalPosition" : 1
                   }
                 ],
                 "indexes" : [
@@ -1016,23 +802,9 @@
                         "ordinalPosition" : 1
                       }
                     ],
-                    "id" : "sessao_pkey",
-                    "enabled" : true
+                    "id" : "sessao_pkey"
                   }
                 ],
-                "name" : "sessao",
-                "restEnableSkipLimit" : true,
-                "restCors" : "*",
-                "id" : "sessao",
-                "restEnableSorters" : true,
-                "restEnableTotal" : false,
-                "restEnableList" : true
-              },
-              {
-                "implements" : "",
-                "nameProtected" : true,
-                "restEnableGet" : true,
-                "restEnableCreate" : true,
                 "isView" : false,
                 "columns" : [
                   {
@@ -1040,34 +812,56 @@
                     "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "expanded" : true,
                     "nullable" : false,
-                    "name" : "utilizadorid",
-                    "id" : "utilizadorid",
-                    "ordinalPosition" : 1,
-                    "enabled" : true
+                    "name" : "sessaoid",
+                    "id" : "sessaoid",
+                    "ordinalPosition" : 1
                   },
                   {
-                    "databaseType" : "java.lang.String",
+                    "databaseType" : "java.lang.Integer",
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "expanded" : true,
                     "nullable" : false,
-                    "name" : "role",
-                    "id" : "role",
-                    "ordinalPosition" : 2,
-                    "enabled" : true
+                    "name" : "eventoid",
+                    "id" : "eventoid",
+                    "ordinalPosition" : 2
+                  },
+                  {
+                    "databaseType" : "java.lang.Integer",
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "salaid",
+                    "id" : "salaid",
+                    "ordinalPosition" : 3
+                  },
+                  {
+                    "databaseType" : "java.lang.Integer",
+                    "expanded" : true,
+                    "nullable" : true,
+                    "name" : "duracao",
+                    "id" : "duracao",
+                    "ordinalPosition" : 4
+                  },
+                  {
+                    "databaseType" : "java.sql.Timestamp",
+                    "expanded" : true,
+                    "nullable" : true,
+                    "name" : "data",
+                    "id" : "data",
+                    "ordinalPosition" : 5
                   }
                 ],
-                "restEnableUpdate" : true,
-                "enabled" : true,
-                "restEnableFilters" : true,
-                "restEnableDelete" : true,
-                "expanded" : false,
-                "restEnabled" : true,
+                "name" : "sessao",
+                "id" : "sessao"
+              },
+              {
+                "expanded" : true,
                 "primaryKeyColumns" : [
                   {
                     "expanded" : true,
                     "name" : "utilizadorid",
                     "id" : "utilizadorid",
-                    "ordinalPosition" : 1,
-                    "enabled" : true
+                    "ordinalPosition" : 1
                   }
                 ],
                 "indexes" : [
@@ -1084,17 +878,31 @@
                         "ordinalPosition" : 1
                       }
                     ],
-                    "id" : "utilizador_pkey",
-                    "enabled" : true
+                    "id" : "utilizador_pkey"
+                  }
+                ],
+                "isView" : false,
+                "columns" : [
+                  {
+                    "databaseType" : "java.lang.Integer",
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "utilizadorid",
+                    "id" : "utilizadorid",
+                    "ordinalPosition" : 1
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "role",
+                    "id" : "role",
+                    "ordinalPosition" : 2
                   }
                 ],
                 "name" : "utilizador",
-                "restEnableSkipLimit" : true,
-                "restCors" : "*",
-                "id" : "utilizador",
-                "restEnableSorters" : true,
-                "restEnableTotal" : false,
-                "restEnableList" : true
+                "id" : "utilizador"
               }
             ],
             "expanded" : true,
@@ -1107,21 +915,21 @@
         ],
         "typeName" : "PostgreSQL",
         "ipAddress" : "127.0.0.1",
-        "name" : "appReservas",
-        "id" : "appReservas",
+        "name" : "appreservas",
+        "id" : "appreservas",
         "enabled" : true,
         "username" : "postgres"
       }
     ],
-    "enabled" : true,
     "oasInfoTitle" : "",
     "oasInfoDescription" : "",
     "expanded" : true,
     "restEnabled" : true,
     "oasInfoTos" : "",
-    "appId" : "221ecfe8-a53f-4c83-9bf1-97ab83a35067",
+    "appId" : "9c7ac60a-6ffd-4137-9e42-f75b3072c700",
     "name" : "public",
-    "id" : "public",
+    "packageName" : "com.appreservas",
+    "id" : "appreservas",
     "restDocsEnabled" : false,
     "oasInfoVersion" : "",
     "oasInfoContactUrl" : ""
