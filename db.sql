@@ -31,8 +31,8 @@ DROP TABLE IF EXISTS Sala ;
 CREATE TABLE IF NOT EXISTS Sala (
   SalaId INTEGER PRIMARY KEY NOT NULL,
   Nome VARCHAR(45) NULL,
-  Localização VARCHAR(45) NULL,
-  LuagresMarcados BOOLEAN NOT NULL,
+  Localizacao VARCHAR(45) NULL,
+  LugaresMarcados BOOLEAN NOT NULL,
   Lotacao INT NULL
 );
 
