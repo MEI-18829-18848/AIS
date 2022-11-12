@@ -15,6 +15,9 @@ jobs:
         - name: Checkout source code
           uses: actions/checkout@v2
 
+        - run: git fetch
+        - run: git pull
+        - run: git merge main 
         - run: sed -i '/<!-- CHANGELOG:START -->/,/<!-- CHANGELOG:END -->/d' README.md
         - run: echo '<!-- CHANGELOG:START -->' >> README.md
         - run: echo '## Project Draft' >> README.md
