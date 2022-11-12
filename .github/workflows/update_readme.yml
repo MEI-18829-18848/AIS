@@ -16,7 +16,10 @@ jobs:
           uses: actions/checkout@v2
 
         - run: git fetch
+        - run: CURR_BRANCH=$(git branch --show-current)
+        - run: git checkout main
         - run: git pull
+        - run: git checkout $CURR_BRANCH
         - run: git merge main 
         - run: sed -i '/<!-- CHANGELOG:START -->/,/<!-- CHANGELOG:END -->/d' README.md
         - run: echo '<!-- CHANGELOG:START -->' >> README.md
