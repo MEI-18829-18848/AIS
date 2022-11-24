@@ -11,5 +11,4 @@ import com.appreservas.appreservas.reservas.utilizador.generated.GeneratedUtiliz
  * @author company
  */
 public final class UtilizadorImpl 
-extends GeneratedUtilizadorImpl 
-implements Utilizador {}
+extends GeneratedUtilizadorImpl {}

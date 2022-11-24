@@ -11,5 +11,4 @@ import com.appreservas.appreservas.reservas.sessao.generated.GeneratedSessaoImpl
  * @author company
  */
 public final class SessaoImpl 
-extends GeneratedSessaoImpl 
-implements Sessao {}
+extends GeneratedSessaoImpl {}

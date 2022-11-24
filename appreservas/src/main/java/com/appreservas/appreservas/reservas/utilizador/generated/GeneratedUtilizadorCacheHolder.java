@@ -22,7 +22,6 @@ import com.speedment.runtime.config.identifier.ColumnIdentifier;
 import com.speedment.runtime.config.identifier.ColumnLabel;
 import com.speedment.runtime.config.identifier.TableIdentifier;
 import com.speedment.runtime.core.component.StreamSupplierComponent;
-import com.speedment.runtime.field.Field;
 import com.speedment.runtime.field.trait.HasIdentifier;
 
 import java.util.Arrays;

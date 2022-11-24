@@ -11,5 +11,4 @@ import com.appreservas.appreservas.reservas.lugar.generated.GeneratedLugarImpl;
  * @author company
  */
 public final class LugarImpl 
-extends GeneratedLugarImpl 
-implements Lugar {}
+extends GeneratedLugarImpl {}

@@ -11,5 +11,4 @@ import com.appreservas.appreservas.reservas.cliente.generated.GeneratedClienteIm
  * @author company
  */
 public final class ClienteImpl 
-extends GeneratedClienteImpl 
-implements Cliente {}
+extends GeneratedClienteImpl {}

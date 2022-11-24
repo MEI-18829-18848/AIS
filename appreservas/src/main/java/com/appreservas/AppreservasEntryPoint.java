@@ -2,8 +2,7 @@ package com.appreservas;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import com.appreservas.AppreservasApplication;
-import com.appreservas.AppreservasApplicationBuilder;
+import org.springframework.context.ConfigurableApplicationContext;
 
 /**
  * The entry point for the {@link com.speedment.runtime.config.Project} named
@@ -15,8 +14,9 @@ import com.appreservas.AppreservasApplicationBuilder;
  */
 @SpringBootApplication
 public class AppreservasEntryPoint {
+    public static ConfigurableApplicationContext app;
     
     public static void main(String... args) {
-        SpringApplication.run(AppreservasEntryPoint.class, args);
+        app = SpringApplication.run(AppreservasEntryPoint.class, args);
     }
 }

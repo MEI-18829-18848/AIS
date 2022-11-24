@@ -11,5 +11,4 @@ import com.appreservas.appreservas.reservas.evento.generated.GeneratedEventoImpl
  * @author company
  */
 public final class EventoImpl 
-extends GeneratedEventoImpl 
-implements Evento {}
+extends GeneratedEventoImpl {}

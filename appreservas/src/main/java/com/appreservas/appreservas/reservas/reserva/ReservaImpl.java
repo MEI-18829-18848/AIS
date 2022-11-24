@@ -11,5 +11,4 @@ import com.appreservas.appreservas.reservas.reserva.generated.GeneratedReservaIm
  * @author company
  */
 public final class ReservaImpl 
-extends GeneratedReservaImpl 
-implements Reserva {}
+extends GeneratedReservaImpl {}

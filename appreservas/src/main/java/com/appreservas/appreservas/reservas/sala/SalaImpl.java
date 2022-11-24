@@ -11,5 +11,4 @@ import com.appreservas.appreservas.reservas.sala.generated.GeneratedSalaImpl;
  * @author company
  */
 public final class SalaImpl 
-extends GeneratedSalaImpl 
-implements Sala {}
+extends GeneratedSalaImpl {}

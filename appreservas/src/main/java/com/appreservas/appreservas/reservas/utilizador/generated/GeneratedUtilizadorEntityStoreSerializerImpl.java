@@ -17,7 +17,6 @@ import com.speedment.enterprise.datastore.runtime.entitystore.function.EntitySto
 import com.speedment.enterprise.datastore.runtime.entitystore.function.EntityStorePredicate;
 import com.speedment.enterprise.datastore.runtime.throwable.DeserializationException;
 import com.speedment.enterprise.datastore.runtime.throwable.Utf8Exception;
-import com.speedment.enterprise.datastore.runtime.util.SerializerUtil;
 import com.speedment.enterprise.datastore.runtime.util.Utf8Util;
 import com.speedment.runtime.config.identifier.ColumnIdentifier;
 

@@ -1,5 +1,18 @@
 package com.appreservas.appreservas.reservas.cliente.generated;
 
+import static java.util.Collections.singletonList;
+import static java.util.Objects.requireNonNull;
+
+import java.nio.ByteBuffer;
+import java.util.List;
+import java.util.function.BiConsumer;
+import java.util.function.LongConsumer;
+import java.util.function.LongFunction;
+import java.util.function.LongPredicate;
+import java.util.function.LongToDoubleFunction;
+import java.util.function.LongToIntFunction;
+import java.util.function.LongUnaryOperator;
+
 import com.appreservas.appreservas.reservas.cliente.Cliente;
 import com.appreservas.appreservas.reservas.cliente.ClienteImpl;
 import com.appreservas.appreservas.reservas.utilizador.Utilizador;
@@ -22,20 +35,6 @@ import com.speedment.enterprise.datastore.runtime.throwable.Utf8Exception;
 import com.speedment.enterprise.datastore.runtime.util.SerializerUtil;
 import com.speedment.enterprise.datastore.runtime.util.Utf8Util;
 import com.speedment.runtime.config.identifier.ColumnIdentifier;
-
-import java.nio.ByteBuffer;
-import java.util.List;
-import java.util.function.BiConsumer;
-import java.util.function.LongConsumer;
-import java.util.function.LongFunction;
-import java.util.function.LongPredicate;
-import java.util.function.LongToDoubleFunction;
-import java.util.function.LongToIntFunction;
-import java.util.function.LongUnaryOperator;
-
-import static java.util.Collections.singletonList;
-import static java.util.Objects.requireNonNull;
-import static java.util.stream.Collectors.joining;
 
 /**
  * Serializes and deserializes instances of Cliente.

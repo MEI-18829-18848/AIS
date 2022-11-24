@@ -1,17 +1,16 @@
 package com.appreservas.appreservas.reservas.reservalugar.generated;
 
+import static com.speedment.runtime.core.util.ResultSetUtil.getInt;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
 import com.appreservas.appreservas.reservas.reservalugar.Reservalugar;
 import com.appreservas.appreservas.reservas.reservalugar.ReservalugarImpl;
 import com.speedment.common.annotation.GeneratedCode;
 import com.speedment.runtime.config.identifier.TableIdentifier;
 import com.speedment.runtime.core.component.SqlAdapter;
 import com.speedment.runtime.core.db.SqlFunction;
-
-import java.sql.ResultSet;
-import java.sql.SQLException;
-
-import static com.speedment.common.injector.State.RESOLVED;
-import static com.speedment.runtime.core.util.ResultSetUtil.*;
 
 /**
  * The generated Sql Adapter for a {@link

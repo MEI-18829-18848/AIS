@@ -11,5 +11,4 @@ import com.appreservas.appreservas.reservas.organizador.generated.GeneratedOrgan
  * @author company
  */
 public final class OrganizadorImpl 
-extends GeneratedOrganizadorImpl 
-implements Organizador {}
+extends GeneratedOrganizadorImpl {}
