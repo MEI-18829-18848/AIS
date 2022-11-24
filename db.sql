@@ -1,14 +1,14 @@
 
 DROP TABLE IF EXISTS Utilizador;
 CREATE TABLE IF NOT EXISTS Utilizador (
-  UtilizadorId INTEGER PRIMARY KEY NOT NULL,
+  UtilizadorId SERIAL PRIMARY KEY,
   Role VARCHAR(45) NOT NULL
 );
 -- -----------------------------------------------------
 DROP TABLE IF EXISTS Organizador;
 
 CREATE TABLE IF NOT EXISTS Organizador (
-  OrganizadorId INTEGER PRIMARY KEY NOT NULL,
+  OrganizadorId SERIAL PRIMARY KEY NOT NULL,
   Nome VARCHAR(45) NOT NULL,
   Contacto VARCHAR(45) NULL,
   UserId INTEGER NOT NULL references Utilizador(UtilizadorId) 
@@ -17,7 +17,7 @@ CREATE TABLE IF NOT EXISTS Organizador (
 DROP TABLE IF EXISTS Cliente;
 
 CREATE TABLE IF NOT EXISTS Cliente(
-  ClienteId INTEGER PRIMARY KEY NOT NULL,
+  ClienteId SERIAL PRIMARY KEY NOT NULL,
   UserId INTEGER NOT NULL references Utilizador(UtilizadorId),
   Nome VARCHAR(45) NOT NULL,
   Telemovel INTEGER NULL,
@@ -29,7 +29,7 @@ CREATE TABLE IF NOT EXISTS Cliente(
 DROP TABLE IF EXISTS Sala ;
 
 CREATE TABLE IF NOT EXISTS Sala (
-  SalaId INTEGER PRIMARY KEY NOT NULL,
+  SalaId SERIAL PRIMARY KEY NOT NULL,
   Nome VARCHAR(45) NULL,
   Localizacao VARCHAR(45) NULL,
   LugaresMarcados BOOLEAN NOT NULL,
@@ -40,7 +40,7 @@ CREATE TABLE IF NOT EXISTS Sala (
 DROP TABLE IF EXISTS Evento ;
 
 CREATE TABLE IF NOT EXISTS Evento (
-  EventoId INTEGER PRIMARY KEY NOT NULL,
+  EventoId SERIAL PRIMARY KEY,
   SalaId INTEGER NOT NULL references Sala(SalaId),
   OrganizadorId INTEGER NOT NULL references Organizador(OrganizadorId),
   Nome VARCHAR(45) NULL,
@@ -53,7 +53,7 @@ CREATE TABLE IF NOT EXISTS Evento (
 DROP TABLE IF EXISTS Sessao ;
 
 CREATE TABLE IF NOT EXISTS Sessao (
-  SessaoId INTEGER PRIMARY KEY NOT NULL,
+  SessaoId SERIAL PRIMARY KEY NOT NULL,
   EventoId INTEGER NOT NULL references Evento(EventoId),
   SalaId INTEGER NOT NULL references Sala(SalaId),
   Duracao INT NULL,
@@ -64,7 +64,7 @@ CREATE TABLE IF NOT EXISTS Sessao (
 DROP TABLE IF EXISTS Reserva ;
 
 CREATE TABLE IF NOT EXISTS Reserva (
-  ReservaId INTEGER PRIMARY KEY NOT NULL,
+  ReservaId SERIAL PRIMARY KEY NOT NULL,
   SessaoId INTEGER NOT NULL references Sessao(SessaoId),
   ClienteId INTEGER NOT NULL references Cliente(ClienteId),
   Custo DECIMAL NULL
@@ -74,7 +74,7 @@ CREATE TABLE IF NOT EXISTS Reserva (
 DROP TABLE IF EXISTS Lugar ;
 
 CREATE TABLE IF NOT EXISTS Lugar (
-  LugarId INTEGER PRIMARY KEY NOT NULL,
+  LugarId SERIAL PRIMARY KEY NOT NULL,
   SalaId INTEGER NOT NULL references Sala(SalaId),
   Nome VARCHAR(45) NULL,
   Quantidade INT NULL,
